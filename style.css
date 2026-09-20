@@ -28,9 +28,8 @@ body {
   text-transform: capitalize;
   background-color: var(--body-bg);
   color: var(--text-colour);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   overflow-x: hidden;
-  position: relative;
 }
 .container {
   max-width: 1620px;
@@ -584,8 +583,15 @@ h3{
   color: var(--text-highlight);
 }
 .plan-card{
+  
   border-radius: 30px;
   box-shadow: 10px 10px 5px 2px #161b29;
+  transition: 0.5s all ease;
+}
+.plan-card:hover{
+  border: 1px solid var(--text-highlight);
+  border-radius: 30px;
+  box-shadow: 10px 10px 5px 2px var(--text-highlight);
   transition: 0.5s all ease;
 }
 .plan-card ul{
@@ -679,6 +685,10 @@ h3{
   color: #000;
   margin-bottom: 20px;
   border-radius: 10px;
+  transition: 0.5s all ease;
+}
+.questions-list li:hover{
+  background-color: var(--text-highlight);
 }
 .questions-list li div:nth-child(2){
   font-size: 40px;
@@ -741,6 +751,12 @@ h4{
 .blog-text-content .section-title{
   left: 835px;
   top: 8335px;
+}
+.blog-card img{
+  transition: 0.5s all ease-in;
+}
+.blog-card img:hover{
+  scale: 1.1;
 }
 .offers{
   background-image: url(images/offerbg.png);
@@ -846,6 +862,12 @@ h5{
   display: flex;
   align-items: center;
   gap: 30px;
+.socials li{
+  transition: 0.5s all ease;
+}
+}
+.socials li :hover{
+  color: var(--text-highlight);
 }
 .copyright{
   font-size: 20px;
@@ -1154,6 +1176,9 @@ textarea{
 
 /* media queries */
 @media (max-width: 1440px) {
+  body{
+    overflow-x: hidden;
+  }
   .container {
     max-width: 1320px;
   }
